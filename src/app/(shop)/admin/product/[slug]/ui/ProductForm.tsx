@@ -13,7 +13,7 @@ interface Props {
   categories: Category[];
 }
 
-const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+const sizes = ["t35", "t36", "t37", "t38", "t39", "t40", "t41", "t42", "t43"];
 
 interface FormInputs {
   title: string;
@@ -23,7 +23,7 @@ interface FormInputs {
   inStock: number;
   sizes: string[];
   tags: string;
-  gender: "men" | "women" | "kid" | "unisex";
+  gender: "men" | "women" | "unisex";
   categoryId: string;
 
   images?: FileList;

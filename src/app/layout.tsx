@@ -6,10 +6,10 @@ import { Providers } from "@/components";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Teslo | Shop",
-    default: "Home - Teslo | Shop",
+    template: "%s - ShoesX | Shop",
+    default: "Home - ShoesX | Shop",
   },
-  description: "Una tienda virtual de productos",
+  description: "Una tienda virtual de zapatos",
 };
 
 export default function RootLayout({

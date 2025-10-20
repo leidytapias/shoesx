@@ -8,24 +8,42 @@ datasource db {
 }
 
 enum Size {
-  XS
-  S
-  M
-  L
-  XL
-  XXL
-  XXXL
+  t35
+  t36
+  t37
+  t38
+  t39
+  t40
+  t41
+  t42
+  t43
+}
+
+enum Color {
+  black
+  white
+  red
+  green
+  blue
+  yellow
+  orange
+  purple
+  pink
+  brown
+  gray
+  silver
+  gold
 }
 
 enum Gender {
   men
   women
-  kid
   unisex
 }
 
 enum Role {
   admin
+  manager
   user
 }
 
@@ -42,6 +60,7 @@ model Product {
   inStock     Int
   price       Float    @default(0)
   sizes       Size[]   @default([])
+  colors      Color[]  @default([])
   slug        String   @unique
   tags        String[] @default([])
   gender      Gender
@@ -134,6 +153,7 @@ model OrderItem {
   quantity Int
   price    Float
   size     Size
+  color    Color
 
   // Relaciones
   order   Order  @relation(fields: [orderId], references: [id])

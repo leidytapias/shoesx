@@ -1,8 +1,11 @@
 -- CreateEnum
-CREATE TYPE "Size" AS ENUM ('XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL');
+CREATE TYPE "Size" AS ENUM ('t35', 't36', 't37', 't38', 't39', 't40', 't41', 't42', 't43');
 
 -- CreateEnum
-CREATE TYPE "Gender" AS ENUM ('men', 'women', 'kid', 'unisex');
+CREATE TYPE "Color" AS ENUM ('black', 'white', 'red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'brown', 'gray', 'silver', 'gold');
+
+-- CreateEnum
+CREATE TYPE "Gender" AS ENUM ('men', 'women', 'unisex');
 
 -- CreateTable
 CREATE TABLE "Category" (
@@ -20,6 +23,7 @@ CREATE TABLE "Product" (
     "inStock" INTEGER NOT NULL,
     "price" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "sizes" "Size"[] DEFAULT ARRAY[]::"Size"[],
+    "colors" "Color"[] DEFAULT ARRAY[]::"Color"[],
     "slug" TEXT NOT NULL,
     "tags" TEXT[] DEFAULT ARRAY[]::TEXT[],
     "gender" "Gender" NOT NULL,

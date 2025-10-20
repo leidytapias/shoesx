@@ -19,7 +19,7 @@ export const getCategories =  async()=> {
 
 
   } catch (error) {
-    console.log(error);
+    console.log("🚀 ~ getCategories ~ error:", error);
     return [];
   }
 

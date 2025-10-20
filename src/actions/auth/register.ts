@@ -29,7 +29,7 @@ export const registerUser = async( name: string, email: string, password: string
     }
 
   } catch (error) {
-    console.log(error);
+    console.log("🚀 ~ registerUser ~ error:", error);
 
     return {
       ok: false,
