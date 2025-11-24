@@ -38,7 +38,6 @@ export default async function GenderByPage({ params, searchParams }: Props) {
   const labels: Record<string, string>  = {
     'men': 'para hombres',
     'women': 'para mujeres',
-    'kid': 'para niños',
     'unisex': 'para todos'
   }
 

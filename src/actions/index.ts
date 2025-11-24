@@ -24,6 +24,7 @@ export * from './payments/paypal-check-payment';
 
 
 export * from './product/delete-product-image';
+export * from './product/delete-product';
 export * from './product/create-update-product';
 export * from './product/get-product-by-slug';
 export * from './product/get-stock-by-slug';

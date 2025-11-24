@@ -13,9 +13,7 @@ interface Props {
 
 
 export const ProductGridItem = ( { product }: Props ) => {
-
-  const [ displayImage, setDisplayImage ] = useState( product.images[ 0 ] );
-
+  const [ displayImage, setDisplayImage ] = useState( product.images[0] );
 
   return (
     <div className="rounded-md overflow-hidden fade-in">
@@ -26,8 +24,20 @@ export const ProductGridItem = ( { product }: Props ) => {
           className="w-full object-cover rounded"
           width={ 500 }
           height={ 500 }
-          onMouseEnter={ () => setDisplayImage( product.images[1] )  }
-          onMouseLeave={ () => setDisplayImage( product.images[0] ) }
+          onMouseEnter={ 
+            () => {
+              if(product.images[1]) {
+                setDisplayImage( product.images[1] )
+              }
+            }
+          }
+          onMouseLeave={ 
+            () => {
+              if(product.images[0]) {
+                setDisplayImage( product.images[0] )
+              }
+            }
+          }
         />
       </Link>
 
